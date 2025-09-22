@@ -11,6 +11,13 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8F82768EDF10430CA9E989CF /* MaruBuri-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BAE9F1DA3D444CF8667A54F /* MaruBuri-Light.ttf */; };
+		79C78856C6D34A758CB3A6D6 /* MaruBuri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C182D01164EA4B118BB336B3 /* MaruBuri-Regular.ttf */; };
+		F793E2214ABF4F1DA7206959 /* MaruBuri-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D68BBE0E650941B597E7C7F9 /* MaruBuri-SemiBold.ttf */; };
+		7AA8CD7A155A45A1AAF504F4 /* Pretendard-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0ABA2C30CC9643C1BD4979B0 /* Pretendard-Light.ttf */; };
+		D9E52F24B9F4415D9DA4B4C3 /* Pretendard-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA48EEC0F6FA4FC3BC990230 /* Pretendard-Medium.ttf */; };
+		E85DF3C5528A413A813A10E0 /* Pretendard-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E550C22A53FA49A29D151850 /* Pretendard-Regular.ttf */; };
+		F53D51F4BEAE47869B07EC40 /* Pretendard-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B9DE69A0B034B2A95B9032B /* Pretendard-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ReadBook/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReadBook/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		6BAE9F1DA3D444CF8667A54F /* MaruBuri-Light.ttf */ = {isa = PBXFileReference; name = "MaruBuri-Light.ttf"; path = "../assets/fonts/MaruBuri-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C182D01164EA4B118BB336B3 /* MaruBuri-Regular.ttf */ = {isa = PBXFileReference; name = "MaruBuri-Regular.ttf"; path = "../assets/fonts/MaruBuri-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D68BBE0E650941B597E7C7F9 /* MaruBuri-SemiBold.ttf */ = {isa = PBXFileReference; name = "MaruBuri-SemiBold.ttf"; path = "../assets/fonts/MaruBuri-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0ABA2C30CC9643C1BD4979B0 /* Pretendard-Light.ttf */ = {isa = PBXFileReference; name = "Pretendard-Light.ttf"; path = "../assets/fonts/Pretendard-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BA48EEC0F6FA4FC3BC990230 /* Pretendard-Medium.ttf */ = {isa = PBXFileReference; name = "Pretendard-Medium.ttf"; path = "../assets/fonts/Pretendard-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E550C22A53FA49A29D151850 /* Pretendard-Regular.ttf */ = {isa = PBXFileReference; name = "Pretendard-Regular.ttf"; path = "../assets/fonts/Pretendard-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6B9DE69A0B034B2A95B9032B /* Pretendard-SemiBold.ttf */ = {isa = PBXFileReference; name = "Pretendard-SemiBold.ttf"; path = "../assets/fonts/Pretendard-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				0AA8D9CA3A47493AAAA6A29A /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -96,6 +111,21 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		0AA8D9CA3A47493AAAA6A29A /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				6BAE9F1DA3D444CF8667A54F /* MaruBuri-Light.ttf */,
+				C182D01164EA4B118BB336B3 /* MaruBuri-Regular.ttf */,
+				D68BBE0E650941B597E7C7F9 /* MaruBuri-SemiBold.ttf */,
+				0ABA2C30CC9643C1BD4979B0 /* Pretendard-Light.ttf */,
+				BA48EEC0F6FA4FC3BC990230 /* Pretendard-Medium.ttf */,
+				E550C22A53FA49A29D151850 /* Pretendard-Regular.ttf */,
+				6B9DE69A0B034B2A95B9032B /* Pretendard-SemiBold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -159,6 +189,13 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				8F82768EDF10430CA9E989CF /* MaruBuri-Light.ttf in Resources */,
+				79C78856C6D34A758CB3A6D6 /* MaruBuri-Regular.ttf in Resources */,
+				F793E2214ABF4F1DA7206959 /* MaruBuri-SemiBold.ttf in Resources */,
+				7AA8CD7A155A45A1AAF504F4 /* Pretendard-Light.ttf in Resources */,
+				D9E52F24B9F4415D9DA4B4C3 /* Pretendard-Medium.ttf in Resources */,
+				E85DF3C5528A413A813A10E0 /* Pretendard-Regular.ttf in Resources */,
+				F53D51F4BEAE47869B07EC40 /* Pretendard-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
