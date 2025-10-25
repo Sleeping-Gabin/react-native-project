@@ -3,7 +3,7 @@ import { AppTheme } from "../styles/themes";
 import { useAppTheme } from "../components/ThemeProvider";
 import BookItem from "../components/BookItem";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { ReviewStackParamList } from "../navigations/types";
+import { ReviewStackParamList, RootStackParamList } from "../navigations/types";
 import { useEffect, useState } from "react";
 import { NitroSQLite, open } from "react-native-nitro-sqlite";
 import Book from "../entity/Book";
@@ -13,7 +13,7 @@ import SansSerifText from "../components/SansSerifText";
 import StarRate from "../components/StarRate";
 import MaterialDesignIcons from "@react-native-vector-icons/material-design-icons";
 
-type ReviewDetailScreenProps = NativeStackScreenProps<ReviewStackParamList, "ReviewDetail">;
+type ReviewDetailScreenProps = NativeStackScreenProps<RootStackParamList, "ReviewDetail">;
 
 export default function ReviewDetailScreen({route}: ReviewDetailScreenProps) {
   const theme = useAppTheme();

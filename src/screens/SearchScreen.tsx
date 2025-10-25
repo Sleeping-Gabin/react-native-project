@@ -103,13 +103,11 @@ export default function SearchScreen() {
       book={item}
       imageWidth={90}
       onPress={() => 
-      navigation.navigate("WriteNav", {
-        screen: "ReviewWrite",
-        params: {
-          mode: "write",
-          book: item
-        }
-      })}
+      navigation.navigate("ReviewWrite", {
+        mode: "write",
+        book: item
+      })
+      }
     />
   );
 

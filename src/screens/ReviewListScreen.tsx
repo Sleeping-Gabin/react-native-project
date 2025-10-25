@@ -74,11 +74,8 @@ export default function ReviewListScreen() {
     <ReviewItem 
       review={item} 
       onPress={() => 
-        navigation.navigate("ReviewNav", {
-          screen: "ReviewDetail",
-          params: {
-            reviewId: item.id!
-          }
+        navigation.navigate("ReviewDetail", {
+          reviewId: item.id!
         })
       }
     />

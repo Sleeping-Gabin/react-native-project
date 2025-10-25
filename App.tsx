@@ -1,7 +1,7 @@
 import { StatusBar, useColorScheme } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useEffect } from 'react';
-import TabBar from './src/navigations/TabBar';
+import RootNavigation from './src/navigations/RootNavigation';
 import { NavigationContainer } from '@react-navigation/native';
 import { open } from 'react-native-nitro-sqlite';
 import { navDarkTheme, navLightTheme } from './src/styles/navigationThemes';
@@ -66,7 +66,7 @@ function App() {
           <ThemeProvider theme={theme}>
             <StatusBar backgroundColor={theme.background} barStyle={colorScheme==="dark"?"light-content":"dark-content"} />
             <NavigationContainer theme={navTheme}>
-              <TabBar />
+              <RootNavigation />
             </NavigationContainer>
           </ThemeProvider>
         </SafeAreaProvider>

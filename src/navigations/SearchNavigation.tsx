@@ -1,12 +1,11 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import ReviewListScreen from "../screens/ReviewListScreen";
-import { ReviewStackParamList } from "./types";
+import { SearchStackParamList } from "./types";
+import SearchScreen from "../screens/SearchScreen";
 import NavHeader from "./NavHeader";
 
-const Stack = createNativeStackNavigator<ReviewStackParamList>();
+const Stack = createNativeStackNavigator<SearchStackParamList>();
 
-export default function ReviewNavigation() {
-  return (
+export default function SearchNavigation() { return (
     <Stack.Navigator
       screenOptions={{
         headerTitleAlign: "center",
@@ -14,10 +13,10 @@ export default function ReviewNavigation() {
       }}
     >
       <Stack.Screen 
-        name="ReviewList" 
-        component={ReviewListScreen} 
+        name="BookSearch" 
+        component={SearchScreen} 
         options={{
-          title: "독서 기록"
+          title: "책 검색"
         }}
       />
     </Stack.Navigator>

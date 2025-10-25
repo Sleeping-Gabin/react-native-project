@@ -1,25 +1,24 @@
 import { NavigatorScreenParams } from "@react-navigation/native";
 import Book from "../entity/Book";
 
-export type ReviewWriteParamList = {
+export type RootStackParamList = {
   ReviewWrite: {
     mode: "modify" | "write",
     reviewId?: number,
     book?: Book
   };
+  ReviewDetail: {
+    reviewId: number,
+  };
+  Tab: NavigatorScreenParams<TabParamList>;
 }
 
 export type ReviewStackParamList = {
   ReviewList: undefined;
-  ReviewDetail: {
-    reviewId: number,
-  };
-  ReviewWrite: ReviewWriteParamList["ReviewWrite"];
 }
 
-export type WriteStackParamList = {
+export type SearchStackParamList = {
   BookSearch: undefined;
-  ReviewWrite:  ReviewWriteParamList["ReviewWrite"];
 }
 
 export type CalendarStackParamList = {
@@ -28,12 +27,12 @@ export type CalendarStackParamList = {
 
 export type TabParamList = {
   ReviewNav: NavigatorScreenParams<ReviewStackParamList>;
-  WriteNav: NavigatorScreenParams<WriteStackParamList>;
+  SearchNav: NavigatorScreenParams<SearchStackParamList>;
   CalendarNav: NavigatorScreenParams<CalendarStackParamList>;
 }
 
 declare global {
   namespace ReactNavigation {
-    interface RootParamList extends TabParamList {}
+    interface RootParamList extends RootStackParamList {}
   }
 }

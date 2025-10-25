@@ -1,13 +1,9 @@
-import { BottomTabBarHeightContext, createBottomTabNavigator, useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
-import CalendarScreen from '../screens/CalendarScreen';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ReviewNavigation from './ReviewNavigation';
 import { TabParamList } from './types';
-import { Dimensions, Keyboard, useColorScheme, View } from 'react-native';
-import WriteNavigation from './WriteNavigation';
+import SearchNavigation from './SearchNavigation';
 import MaterialDesignIcons from '@react-native-vector-icons/material-design-icons';
-import NavHeader from './NavHeader';
 import CalendarNavigation from './CalendarNavigation';
-import { useEffect, useState } from 'react';
 
 const Tab = createBottomTabNavigator<TabParamList>();
 
@@ -19,7 +15,7 @@ export default function TabBar() {
         tabBarHideOnKeyboard: true,
         headerTitleAlign: "center",
         headerShown: false,
-        animation: "shift"
+        // animation: "shift"
       }}
     >
       <Tab.Screen 
@@ -32,10 +28,10 @@ export default function TabBar() {
         }}
       />
       <Tab.Screen
-        name="WriteNav"
-        component={WriteNavigation}
+        name="SearchNav"
+        component={SearchNavigation}
         options={{
-          title: "기록 추가",
+          title: "책 검색",
           tabBarIcon: ({focused, color, size}) => 
             <MaterialDesignIcons name={focused ? "book-plus" : "book-plus-outline"} color={color} size={18} />
         }}

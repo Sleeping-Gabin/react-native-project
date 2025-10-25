@@ -1,11 +1,10 @@
-import React, { PropsWithChildren, ReactElement, SetStateAction, useEffect, useLayoutEffect } from "react";
-import { View, StyleSheet, TouchableHighlight, Modal, Dimensions, FlatList, LayoutChangeEvent, Pressable } from "react-native";
+import React, { PropsWithChildren, ReactElement, SetStateAction } from "react";
+import { View, StyleSheet, TouchableHighlight, Modal, Dimensions, FlatList, Pressable } from "react-native";
 import { useAppTheme } from "./ThemeProvider";
 import { AppTheme } from "../styles/themes";
 import Animated, { useAnimatedReaction, useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 import { closeSheet, useAppDispatch, useAppSelector } from "../store";
 import { scheduleOnRN } from "react-native-worklets";
-import { Gesture, GestureDetector } from "react-native-gesture-handler";
 
 interface BottomSheetProps {
   data: ReactElement[];

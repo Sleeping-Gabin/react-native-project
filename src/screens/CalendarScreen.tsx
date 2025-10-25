@@ -178,9 +178,11 @@ export default function CalendarScreen() {
         renderItem={({item}) => (
           <ReviewItem 
             review={item} 
-            onPress={() => navigation.navigate("ReviewNav", 
-              {screen: "ReviewDetail", params: {reviewId: item.id!}}
-            )}
+            onPress={() => {
+              navigation.navigate("ReviewDetail", {
+                reviewId: item.id!
+              })
+            }}
           />
         )}
         keyExtractor={item => item.id!.toString()}

@@ -1,6 +1,5 @@
-import { Keyboard, KeyboardAvoidingView, StyleSheet, TextInput, ToastAndroid, View } from "react-native";
+import { Keyboard, StyleSheet, TextInput, ToastAndroid, View } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { ReviewWriteParamList } from "../navigations/types";
 import SansSerifText from "../components/SansSerifText";
 import { useAppTheme } from "../components/ThemeProvider";
 import { AppTheme } from "../styles/themes";
@@ -16,8 +15,9 @@ import StarRate from "../components/StarRate";
 import Book from "../entity/Book";
 import SheetLabel from "../components/SheetLabel";
 import BottomSheet from "../components/BottomSheet";
+import { RootStackParamList } from "../navigations/types";
 
-type ReviewWriteScreenProps = NativeStackScreenProps<ReviewWriteParamList, "ReviewWrite">;
+type ReviewWriteScreenProps = NativeStackScreenProps<RootStackParamList, "ReviewWrite">;
 
 export default function ReviewWriteScreen({route}: ReviewWriteScreenProps) {
   const {mode, book: bookParam, reviewId} = route.params;
@@ -71,7 +71,7 @@ export default function ReviewWriteScreen({route}: ReviewWriteScreenProps) {
 
     dispatch(unpressSave());
     navigation.reset({
-      routes: [{name: "ReviewNav"}]
+      routes: [{name: "Tab"}]
     });
   }
 
@@ -93,7 +93,7 @@ export default function ReviewWriteScreen({route}: ReviewWriteScreenProps) {
 
     dispatch(unpressSave());
     navigation.reset({
-      routes: [{name: "ReviewNav"}]
+      routes: [{name: "Tab"}]
     });
   }
 
