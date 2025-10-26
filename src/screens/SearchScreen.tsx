@@ -1,4 +1,4 @@
-import { FlatList, Pressable, StyleSheet, TextInput, TouchableHighlight, View } from "react-native";
+import { FlatList, StyleSheet, TextInput, TouchableHighlight, View } from "react-native";
 import { closeSheet, useAppDispatch } from "../store";
 import { useRef, useState } from "react";
 import Book from "../entity/Book";
@@ -9,8 +9,7 @@ import { AppTheme } from "../styles/themes";
 import { useAppTheme } from "../components/ThemeProvider";
 import BottomSheet from "../components/BottomSheet";
 import SheetLabel from "../components/SheetLabel";
-
-const REST_API_KEY = "242d06232182812dd35c92b9a24c1499";
+import { REST_API_KEY } from "@env";
 
 const targetList = [
   { name: "전체", value: null },

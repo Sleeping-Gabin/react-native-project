@@ -4,6 +4,7 @@
   "exclude": ["**/node_modules", "**/Pods"],
   "compilerOptions": {
     "strictNullChecks": true,
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",
+    "typeRoots": ["./types", "./node_modules/@types"]
   }
 }
