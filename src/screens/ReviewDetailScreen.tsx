@@ -82,7 +82,7 @@ export default function ReviewDetailScreen({route}: ReviewDetailScreenProps) {
 
     {
       review &&
-      <SerifText style={styles.text}>
+      <SerifText style={styles.text} selectable>
         {review.text}
       </SerifText>
     }
@@ -112,6 +112,6 @@ const createStyles = (theme: AppTheme) => StyleSheet.create({
     backgroundColor: theme.lightGray,
   },
   text: {
-    textAlign: "justify",
+    lineHeight: 22,
   }
 });

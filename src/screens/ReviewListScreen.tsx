@@ -23,7 +23,8 @@ export default function ReviewListScreen() {
     });
 
     const {rows} = await db.executeAsync(`
-      SELECT * FROM review;
+      SELECT * FROM review 
+      ORDER BY write_date DESC, id DESC;
     `);
 
     if (rows) {
@@ -51,7 +52,8 @@ export default function ReviewListScreen() {
     const {rows} = await db.executeAsync(`
       SELECT review.* FROM review
       JOIN book ON review.id = book.review_id
-      WHERE (book.title LIKE ?) OR (review.text LIKE ?);
+      WHERE (book.title LIKE ?) OR (review.text LIKE ?)
+      ORDER BY write_date DESC, id DESC;
     `, [`%${query}%`, `%${query}%`]);
 
     if (rows) {

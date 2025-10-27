@@ -73,7 +73,7 @@ export default function SearchScreen() {
       });
       const data = await response.json();
 
-      const newBookList = page > 0 ? [...bookList] : [];
+      const newBookList = page > 1 ? [...bookList] : [];
       for (let book of data.documents) {
         if (!book.title || !book.authors || !book.publisher || !book.thumbnail || !book.datetime) continue;
 

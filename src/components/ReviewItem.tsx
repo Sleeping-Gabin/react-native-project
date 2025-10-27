@@ -124,7 +124,7 @@ const createStyles = (theme: AppTheme) => StyleSheet.create({
     fontSize: 16,
   },
   text: {
-    textAlign: "justify"
+    lineHeight: 22
   },
   infos: {
     flexDirection: "row",

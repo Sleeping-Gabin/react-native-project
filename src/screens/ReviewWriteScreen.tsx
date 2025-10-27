@@ -263,5 +263,7 @@ const createStyles = (theme: AppTheme) => StyleSheet.create({
     fontFamily: "MaruBuri-Regular",
     textAlignVertical: "top",
     color: theme.text,
+    // textAlign: "justify",
+    lineHeight: 22
   }
 });
