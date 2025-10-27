@@ -3,15 +3,16 @@ import { AppTheme } from "../styles/themes";
 import { useAppTheme } from "../components/ThemeProvider";
 import BookItem from "../components/BookItem";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { ReviewStackParamList, RootStackParamList } from "../navigations/types";
+import { RootStackParamList } from "../navigations/types";
 import { useEffect, useState } from "react";
-import { NitroSQLite, open } from "react-native-nitro-sqlite";
+import { NitroSQLite } from "react-native-nitro-sqlite";
 import Book from "../entity/Book";
 import SerifText from "../components/SerifText";
 import Review from "../entity/Review";
 import SansSerifText from "../components/SansSerifText";
 import StarRate from "../components/StarRate";
 import MaterialDesignIcons from "@react-native-vector-icons/material-design-icons";
+import DeleteModal from "../components/DeleteModal";
 
 type ReviewDetailScreenProps = NativeStackScreenProps<RootStackParamList, "ReviewDetail">;
 
@@ -51,6 +52,10 @@ export default function ReviewDetailScreen({route}: ReviewDetailScreenProps) {
 
   return (
     <ScrollView style={styles.container}>
+    {
+      review?.id &&
+      <DeleteModal reviewId={review.id}/>
+    }
     {
       review &&
       <View style={styles.infoContainer}>

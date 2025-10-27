@@ -26,12 +26,14 @@ export const {closeSheet, openSheet} = sheetSlice.actions;
 // button slice
 interface ButtonState {
   pressSave: boolean;
+  pressDelete: boolean;
 }
 
 const buttonSlice = createSlice({
   name: "button",
   initialState: {
     pressSave: false,
+    pressDelete: false
   } satisfies ButtonState as ButtonState,
   reducers: {
     pressSave: (state) => {
@@ -40,9 +42,15 @@ const buttonSlice = createSlice({
     unpressSave: (state) => {
       state.pressSave = false;
     },
+    pressDelete: (state) => {
+      state.pressDelete = true;
+    },
+    unpressDelete: (state) => {
+      state.pressDelete = false;
+    },
   }
 });
-export const {pressSave, unpressSave} = buttonSlice.actions;
+export const {pressSave, unpressSave, pressDelete, unpressDelete} = buttonSlice.actions;
 
 // calendar slice
 interface CalendarState {
